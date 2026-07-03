@@ -122,3 +122,25 @@ const {
 }=stud;
 console.log(name);
 console.log(details);
+
+
+/* Scenario 1: Copy an Array ⭐ (Spread)
+
+Given:
+
+const fruits = ["Apple", "Mango", "Orange"];
+
+Create a copy called newFruits.
+
+Then add "Banana" to the copied array.
+
+Expected Output
+Original: ["Apple","Mango","Orange"]
+
+Copy: ["Apple","Mango","Orange","Banana"] */
+
+const fruits = ["Apple", "Mango", "Orange"];
+const newFruit=[...fruits];
+newFruit.push("Banana");
+console.log(`original: ${fruits}`);
+console.log(`original: ${newFruit}`);

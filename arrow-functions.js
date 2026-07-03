@@ -37,5 +37,23 @@ const users=[
 const user=users.find(u=>u.id===3);
 console.log(user)
 
+/* Scenario 1: Check Even or Odd ⭐
 
+Accept one number.
+
+Print
+
+Even
+
+or
+
+Odd
+ */
+
+const  num=(n)=>
+{
+    const res=n%2===0?"even":"odd";
+    console.log(res);
+}
+num(5);
 

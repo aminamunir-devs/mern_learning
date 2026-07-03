@@ -63,3 +63,45 @@ class Stud2 extends Person {
 const student4 = new Stud2();
 
 student4.greet();
+
+/* Scenario 1: Student Management ⭐ (Easy)
+
+Create a Student class.
+
+Properties
+name
+age
+course
+Methods
+introduce()
+study()
+Expected Output
+Hi, I'm Amina.
+I'm studying MERN.
+
+Challenge: Create 3 different students. */
+
+class stud{
+    constructor(name,age,course)
+    {
+        this.name=name;
+        this.age=age;
+        this.course=course
+        
+        
+    }
+    introduce()
+    {
+        console.log(`Hi, I'm ${this.name}`);
+    }
+    study()
+    {
+        console.log(`I'm studying ${this.course}`)
+    }
+}
+
+const s1=new stud("amina",22,"mern");
+const s2=new stud("ali",23,"data structure");
+const s3=new stud("manahil",24,"react");
+s1.introduce();
+s1.study();

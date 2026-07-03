@@ -119,4 +119,36 @@ display(
 )
 
 
+/* Scenario 1: Student Information ⭐ (Object Destructuring)
 
+Given:
+
+const student = {
+    name: "Amina",
+    age: 22,
+    course: "MERN"
+};
+Task
+
+Extract:
+
+name
+age
+course
+Expected Output
+Name: Amina
+
+Age: 22
+
+Course: MERN
+ */
+
+const student1 = {
+    name1: "Amina",
+    age1: 22,
+    course1: "MERN"
+};
+const {name1,age1,course1}=student1
+console.log(`Name:${name1}`)
+console.log(`Age:${age1}`)
+console.log(`Course:${course1}`)
