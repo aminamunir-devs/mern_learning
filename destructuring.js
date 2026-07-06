@@ -152,3 +152,30 @@ const {name1,age1,course1}=student1
 console.log(`Name:${name1}`)
 console.log(`Age:${age1}`)
 console.log(`Course:${course1}`)
+
+/* Scenario 2: Employee Details ⭐
+
+Given
+
+const employee = {
+    id: 101,
+    name: "Ali",
+    department: "IT",
+    salary: 80000
+};
+
+Extract only
+
+name
+salary */
+
+const employee = {
+    id: 101,
+    name2: "Ali",
+    department: "IT",
+    salary: 80000
+};
+
+const {name2,salary}=employee;
+console.log(name2);
+console.log(salary);
