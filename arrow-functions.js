@@ -57,3 +57,34 @@ const  num=(n)=>
 }
 num(5);
 
+/* Scenario 6: Maximum Number ⭐⭐
+
+Accept two numbers.
+
+Return the larger number.
+
+Example
+
+findMax(15,25);
+
+Output
+
+25 */
+
+const findMax=(n,m)=>
+{
+    if(n>m)
+    {
+        return n;
+    }
+    else 
+    {
+        return m;
+    }
+}
+console.log(findMax(15,25));
+  
+    // or
+
+const Max=(n,m)=>(n>m?n:m);
+console.log(Max(14,12));

@@ -30,3 +30,55 @@ console.log(`
     age:${student.age}
     course:${student.course}`)
 
+/* Scenario 1: Shopping Bill ⭐
+
+Given
+
+const item = "Laptop";
+const price = 90000;
+const quantity = 2;
+
+Print
+
+Item: Laptop
+
+Price: 90000
+
+Quantity: 2
+
+Total: 180000
+
+(Hint: Calculate the total inside ${}.) */
+
+const item = "Laptop";
+const price = 90000;
+const quantity = 2;
+
+console.log(
+    `item:${item} 
+     price:${price} 
+     Quentity:${quantity} 
+     Total:${quantity*price}`
+)
+
+/* Scenario 2: Calculator ⭐
+
+Given
+
+const a = 20;
+const b = 10;
+
+Print
+
+20 + 10 = 30
+20 - 10 = 10
+20 × 10 = 200
+20 ÷ 10 = 2 */
+
+const x = 20;
+const y = 10;x
+console.log(`
+    ${x}+${y}=${x+y}
+    ${x}-${y}=${x-y}
+    ${x}*${y}=${x*y}
+    ${x}/${y}=${x/y}`)

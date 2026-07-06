@@ -144,3 +144,19 @@ const newFruit=[...fruits];
 newFruit.push("Banana");
 console.log(`original: ${fruits}`);
 console.log(`original: ${newFruit}`);
+
+/* Scenario 3: Add Elements ⭐ (Spread)
+
+Given
+
+const numbers = [2,3,4];
+
+Create
+
+[1,2,3,4,5]
+
+using the spread operator. */
+
+const numbers = [2,3,4];
+const new1=[1,...numbers,5];
+console.log(new1)
