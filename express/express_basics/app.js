@@ -83,20 +83,21 @@
 
 
 const express = require("express");
-const cors = require("cors");
-require("dotenv").config();
+const dotenv = require("dotenv");
 
-const studentRoutes = require("./routes/studentRoutes");
 const logger = require("./middleware/logger");
+const studentRoutes = require("./routes/studentRoutes");
+
+dotenv.config();
 
 const app = express();
 
-// Middleware
-app.use(cors());
 app.use(express.json());
+
+// Logger Middleware
 app.use(logger);
 
-// Routes
+// Student Routes
 app.use(studentRoutes);
 
 const PORT = process.env.PORT || 5000;
