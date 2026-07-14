@@ -48,6 +48,7 @@ export const loginService = async (userData) => {
   const token = jwt.sign(
     {
       userId: user._id,
+      role: user.role,
     },
     process.env.JWT_SECRET,
     {
@@ -56,10 +57,11 @@ export const loginService = async (userData) => {
   );
 
   // Remove password before returning
-  const userResponse = {
-    _id: user._id,
-    email: user.email,
-  };
+ const userResponse = {
+  _id: user._id,
+  email: user.email,
+  role: user.role,
+};
 
   return {
     user: userResponse,

@@ -25,11 +25,13 @@ const authMiddleware = (req, res, next) => {
     // Continue to next middleware/controller
     next();
   } catch (error) {
-    return res.status(401).json({
-      success: false,
-      message: "Invalid or expired token",
-    });
-  }
+  console.log(error);
+
+  return res.status(401).json({
+    success: false,
+    message: "Invalid or expired token",
+  });
+}
 };
 
 export default authMiddleware;
