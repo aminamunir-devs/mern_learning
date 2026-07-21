@@ -1,37 +1,19 @@
-import StudentForm from "./components/StudentForm"
-import StudentList from "./components/StudentList";
-import API from "./api/studentApi";
-
-import { useState ,useEffect} from "react";
 
 
+ import Dashboard from "./pages/Dashboard";
+import Students from "./pages/Students";
+import AddStudent from "./pages/AddStudent";
+import EditStudent from "./pages/EditStudent";
 
+
+import { Routes,Route } from "react-router-dom";
 export default function App() {
-
-  const [students ,setStudents]=useState([]);
-  const [editingStudent,setEditingStudent]=useState(null);
-
-  const fetchStudents=async()=>{
-    const response=await API.get("/students")
-    setStudents(response.data);
-}
-useEffect(()=>{
-    fetchStudents();
-},[])
-
-const deleteStudent=async(id)=>{
-  await API.delete(`/students/${id}`);
-  fetchStudents();
-}
-
   return (
-    <div>
-      <StudentForm onStudentAdded={fetchStudents}
-      editingStudent={editingStudent}
-      setEditingStudent={setEditingStudent}/>
-      <StudentList students={students}
-      setEditingStudent={setEditingStudent}
-      deleteStudent={deleteStudent}/>
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/students" element={<Students />} />
+      <Route path="/students/add" element={<AddStudent />} />
+      <Route path="/students/edit/:id" element={<EditStudent />} />
+    </Routes>
+  );
 }
