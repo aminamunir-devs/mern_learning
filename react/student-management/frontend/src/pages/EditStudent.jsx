@@ -78,6 +78,7 @@ export default function EditStudent() {
           >
             Update Student
           </button>
+          
         </form>
       </div>
     </Layout>

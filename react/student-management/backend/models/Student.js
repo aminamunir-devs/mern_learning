@@ -13,6 +13,11 @@ const studentSchema=new mongoose.Schema({
     age:{
         type:Number,
         required:true
+    },
+    teacher:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Teacher",
+        required:true,
     }
 });
 const student=mongoose.model("student",studentSchema);
